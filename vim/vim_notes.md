@@ -74,3 +74,51 @@ Model editing: A number of different keyboards that change meaning depending on 
     A - move to end of line
     o - insert new line above current line and enter insert mode
     O - insert new line below current line and enter insert mode
+    
+### Using tab pages
+
+##### Open/close tabs
+When starting vim, the <code>-p flag</code> opens each specified file in a separate tab (up to the value of 'tabpagemax' option)
+
+    - vim -p first_file.py second_file.rb
+    - vim -p *.txt *.md
+
+Once in vim thera are many commands that can directly create/close tabs
+
+    - :tabedit {file_name} - edits file in a new tab
+    - :tabfind {file_name} - open new tab with file_name given, searching the 'path' to locate the file
+    - :tabclose - closes current tab
+    - :tabclose {i} close i-th tab
+    - :tabonly - close all other tabs, show only the current tab
+    - :tabe <file_name>
+
+##### :tab command-line modifier
+
+    - :tab ball - show each buffer in a tab
+    - :tab help - open new help window in it's own tab page
+    - :tab drop {file_name} - open file in new tab or jump to a new tab of it's own
+    - :tab split - copy current window to a new tab of it's own
+    - :sp my_file.txt - creates a new window in the current tab, editing the specified file
+    - ^W T - movew window to a new tab
+    - :tab sp - splits current window but open this split in a new tab
+    - ^W c closes current window and closes tab if it's the last visible window
+
+    
+If the current file contains the name of another file, place cursor on the name & type 'gf' to edit (go to file) the file. Typing ^W 'gf' displays the file in a new tab.
+
+##### Tab Navigation
+
+    - :tabs - listsl all tabs including their displayed windows
+    - :tab 0 - moves current tab into first place
+    - :tab m - moves current tab into last place
+    - :tabm{i} - moves current tab into position (i + 1)
+    - :tabn - go to next tab
+    - :tabp - go to previous tab
+    - :tabfirst - go to first tab
+    - :tablast - go to last tab
+
+##### Tab Navigation in Normal Mode
+
+    - gt - got to next tab
+    - gT - go to previous tab
+    - {i}gt - go to tab in position {i}
