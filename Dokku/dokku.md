@@ -1,4 +1,4 @@
-#####RUN A COMMAND IN AN APP ENVIRONMENT
+####RUN A COMMAND IN AN APP ENVIRONMENT
 ``` ruby
 dokku run <app_name> <command>
 ```
