@@ -64,16 +64,18 @@ Model editing: A number of different keyboards that change meaning depending on 
 ### Additional Commands
 
     The dot (.) command - repeats most recent vim command
-    p - paste below current line
-    P - paste above current line
+    p  - paste below current line
+    P  - paste above current line
     dd - delete the current line
     yy - yank(copy) the current line
-    D - delete until end of line
-    C - change until end of line
-    I - move to beginning of line
-    A - move to end of line
-    o - insert new line above current line and enter insert mode
-    O - insert new line below current line and enter insert mode
+    D  - delete until end of line
+    C  - change until end of line
+    I  - move to beginning of line
+    A  - move to end of line
+    o  - insert new line above current line and enter insert mode
+    O  - insert new line below current line and enter insert mode
+    t. - duplicate line (like atom/sublime's [cmd+d])
+    t7 - copy after line 7
     
 ### Using tab pages
 
